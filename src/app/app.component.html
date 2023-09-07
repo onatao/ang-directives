@@ -1,4 +1,10 @@
 <!-- ngIf false for hide the entire app-card component -->
 <!-- ngIf using data biding, isCardAlive are declared on app.component.ts -->
-<app-card *ngIf="isCardAlive"></app-card>
+<app-card *ngIf="isCardAlive; else secretBlock"></app-card>
+
+<ng-template #secretBlock>
+  <h1>Hello! Im a secret Ng Template</h1>
+  <p>this block is revealed only when the boolean value of isCardAlive is false.</p>
+</ng-template>
+
 <router-outlet></router-outlet>
