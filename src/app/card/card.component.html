@@ -1,10 +1,13 @@
 <h1>My App</h1>
 <!-- ngIf - boolean true or false. In this case only p wont be show-->
 <p *ngIf="false">card works!</p>
-<button>Hello World</button>
+<button>Hello World Button</button>
 
 <!-- Create a list for each p on products array  -->
 <ul>
   <li *ngFor="let p of products">{{ p }}</li>
+  <!-- Reactive buttons linked to the add/remove method and products list -->
+  <button (click)="add()">Add</button>
+  <button (click)="remove()">Remove</button>
 </ul>
 
