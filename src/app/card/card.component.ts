@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CardComponent implements OnInit {
 
   products:string[] = []
+  menuType:string = "nathan"
 
   constructor() {
     this.products = [
@@ -26,8 +27,14 @@ export class CardComponent implements OnInit {
   add() {
     this.products.push("New product")
   }
-  // Linked on card.component.html
+
   remove() {
     this.products.pop()
   }
+
+  removeWithIndex(index:number) {
+    this.products.splice(index, 1)
+  }
+
+
 }

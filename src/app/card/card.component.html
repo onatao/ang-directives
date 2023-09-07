@@ -9,5 +9,38 @@
   <!-- Reactive buttons linked to the add/remove method and products list -->
   <button (click)="add()">Add</button>
   <button (click)="remove()">Remove</button>
+
+  <!-- ngFor using the index i -->
+  <li *ngFor="let p of products; let i = index"
+    (click)="removeWithIndex(i)"
+  >
+    {{ i }} - {{ p }}
+  </li>
 </ul>
+
+<div [ngSwitch]="menuType">
+  <div *ngSwitchCase="'user'">
+    <ul>
+      <li> Edit profile </li>
+      <li> Add paymeny cart</li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'admin'">
+    <ul>
+      <li> Edit profile </li>
+      <li> Add paymeny cart</li>
+      <li> Users Management </li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'superuser'">
+    <ul>
+      <li> Edit profile </li>
+      <li> Add paymeny cart</li>
+      <li> Admin Management </li>
+    </ul>
+  </div>
+  <div *ngSwitchDefault>
+    <h1>Invalid user type</h1>
+  </div>
+</div>
 
