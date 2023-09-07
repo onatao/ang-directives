@@ -1,3 +1,4 @@
 <!-- ngIf false for hide the entire app-card component -->
-<app-card *ngIf="true"></app-card>
+<!-- ngIf using data biding, isCardAlive are declared on app.component.ts -->
+<app-card *ngIf="isCardAlive"></app-card>
 <router-outlet></router-outlet>

@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ang-directives';
+  // Used on ngIf at app.component.html
+  isCardAlive = true;
 }
