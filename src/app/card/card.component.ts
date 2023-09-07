@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  products:string[] = []
+
+  constructor() {
+    this.products = [
+      "Mouse",
+      "Teclado",
+      "Monitor",
+      "Pen Drive",
+      "Headset"
+    ]
+  }
 
   ngOnInit(): void {
   }
