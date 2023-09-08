@@ -1,5 +1,17 @@
 <p [ngClass]="style">Cool phrase</p>
 <button (click)="action()">Change state</button>
+
 <h1 [ngStyle]="{'background':corFundo, 'color':corFonte}"
 >
  Angular Course</h1>
+
+<h1>Wishlist</h1>
+<input type="text" [(ngModel)]="item">
+<button (click)="addToList(item)">Add to cart</button>
+<p>{{ item }}</p>
+
+<ul>
+  <li *ngFor="let p of productList">{{ p }}</li>
+</ul>
+
+<hr>

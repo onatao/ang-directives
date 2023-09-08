@@ -13,6 +13,10 @@ export class CompAttributeComponent implements OnInit {
   corFundo:string = "red"
   corFonte:string = "blue"
 
+  // ngModel
+  item:string = ""
+  productList:string[] = []
+
   constructor() { }
 
   ngOnInit(): void {
@@ -24,6 +28,10 @@ export class CompAttributeComponent implements OnInit {
     } else {
       this.style = "disable"
     }
+  }
+
+  addToList(item:string) {
+    this.productList.push(this.item)
   }
 
 }
