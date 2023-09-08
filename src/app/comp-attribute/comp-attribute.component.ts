@@ -9,6 +9,10 @@ export class CompAttributeComponent implements OnInit {
 
   style:string = "enable"
 
+  // ngStyle props
+  corFundo:string = "red"
+  corFonte:string = "blue"
+
   constructor() { }
 
   ngOnInit(): void {
