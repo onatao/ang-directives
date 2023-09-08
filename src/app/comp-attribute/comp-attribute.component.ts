@@ -17,6 +17,8 @@ export class CompAttributeComponent implements OnInit {
   item:string = ""
   productList:string[] = []
 
+  // ngTemplate prop
+  isEnable:boolean = true
   constructor() { }
 
   ngOnInit(): void {
